@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.huacheng.cloud.dao.PaymentDao" >
+
+    <select id="getPaymentById" parameterType="java.lang.Long" resultType="Payment">
+        select id,serial from payment where id=#{id}
+    </select>
+
+    <insert id="create" useGeneratedKeys="true" keyProperty="id" parameterType="Payment">
+       insert into payment(serial) values(#{serial})
+    </insert>
+</mapper>

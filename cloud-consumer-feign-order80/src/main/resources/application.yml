@@ -1,0 +1,25 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    # false表示不向注册中心注册自己
+    register-with-eureka: false
+    # false 表示自己端就是注册中心，我的职责是维护服务实例，并不需要去检索实例
+    fetch-registry: true
+    service-url:
+      # 设置与Eureka Server交互的地址、查询服务和注册服务都需要依赖这个地址
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka
+feign:
+  client:
+    config:
+      #default 为全局配置，如果要单独配置每个服务，改为服务名
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+  hystrix:
+    enabled: true
+logging:
+  level:
+    # feign 日志以什么级别监控那个接口
+    com.huacheng.cloud.service.PaymentFeignService: debug
