@@ -13,10 +13,17 @@ spring:
           - springcloud-config
         default-label: master
 
+  rabbitmq:
+    host: 47.107.47.215
+    port: 5672
+    username: admin
+    password: admin
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+
 
 management:
   endpoints:

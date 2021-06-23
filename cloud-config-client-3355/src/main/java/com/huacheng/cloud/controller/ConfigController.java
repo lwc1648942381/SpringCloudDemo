@@ -13,10 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RefreshScope
 public class ConfigController {
+
     @Value("${mybatis.mapper-locations}")
     private String locations;
 
-        @GetMapping("configinfo")
+    @GetMapping("configinfo")
     public String getConfig(){
         return locations;
     }
