@@ -27,7 +27,7 @@
 
         <!--引入自定义的api通用包，可以使用Payment支付Entity-->
         <dependency>
-            <groupId>\com.huacheng.cloud</groupId>
+            <groupId>com.huacheng.cloud</groupId>
             <artifactId>cloud-api-common</artifactId>
             <version>${project.version}</version>
         </dependency>

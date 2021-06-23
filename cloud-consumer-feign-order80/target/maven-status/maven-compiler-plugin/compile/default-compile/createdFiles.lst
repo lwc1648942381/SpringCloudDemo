@@ -1,0 +1,4 @@
+com\huacheng\cloud\OrderFeignMain80.class
+com\huacheng\cloud\config\FeignConfig.class
+com\huacheng\cloud\controller\OrderFeignController.class
+com\huacheng\cloud\service\PaymentFeignService.class

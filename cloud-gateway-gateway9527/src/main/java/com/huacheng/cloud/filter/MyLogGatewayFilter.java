@@ -14,8 +14,7 @@ import reactor.core.publisher.Mono;
 public class MyLogGatewayFilter implements GlobalFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        exchange.
-        return null;
+        return chain.filter(exchange);
     }
 
     @Override
