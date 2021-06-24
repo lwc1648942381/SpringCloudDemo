@@ -24,8 +24,6 @@ eureka:
       defaultZone: http://localhost:7001/eureka
 
 
-
-
 management:
   endpoints:
     web:
