@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    hostname: eureka7001.com
+    hostname: localhost
   client:
     # false表示不向注册中心注册自己
     register-with-eureka: false
@@ -11,7 +11,7 @@ eureka:
     fetch-registry: false
     service-url:
       # 设置与Eureka Server交互的地址、查询服务和注册服务都需要依赖这个地址
-      defaultZone: http://eureka7002.com:7002/eureka/
+      defaultZone: http://localhost:7002/eureka/
   server:
     # 关闭Eureka自我保护机制，保证服务不可用时被及时的剔除
     enable-self-preservation: false
