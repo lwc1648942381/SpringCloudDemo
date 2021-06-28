@@ -18,13 +18,13 @@ import javax.annotation.Resource;
 @RestController
 public class SendMessageController {
 
-//    @Resource
-//    private MessageProviderImpl messageProvider;
-//
-//    @GetMapping(value = "/sendMessage")
-//    public String sendMessage()
-//    {
-//        return messageProvider.send();
-//    }
+    @Resource
+    private MessageProviderImpl messageProvider;
+
+    @GetMapping(value = "/sendMessage")
+    public String sendMessage()
+    {
+        return messageProvider.send();
+    }
 
 }

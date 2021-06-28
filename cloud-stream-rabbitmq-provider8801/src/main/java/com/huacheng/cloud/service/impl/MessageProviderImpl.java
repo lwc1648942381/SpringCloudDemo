@@ -2,12 +2,11 @@ package com.huacheng.cloud.service.impl;
 
 import com.huacheng.cloud.service.IMessageProvider;
 import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.integration.support.MessageBuilder;
 import org.springframework.messaging.MessageChannel;
-import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import javax.xml.transform.Source;
 import java.util.UUID;
 
 /**
@@ -26,9 +25,9 @@ public class MessageProviderImpl implements IMessageProvider {
 
     @Override
     public String send() {
-//        String serial = UUID.randomUUID().toString();
-//        output.send(MessageBuilder.withPayload(serial).build());
-//        System.out.println("*****serial: "+serial);
+        String serial = UUID.randomUUID().toString();
+        output.send(MessageBuilder.withPayload(serial).build());
+        System.out.println("*****serial: "+serial);
        return null;
     }
 }
